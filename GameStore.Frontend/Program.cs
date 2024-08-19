@@ -15,7 +15,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection(); // Warning 제거
 
 app.UseStaticFiles();
 app.UseAntiforgery();
