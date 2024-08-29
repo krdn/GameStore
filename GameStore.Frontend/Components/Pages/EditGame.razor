@@ -1,0 +1,36 @@
+﻿@page "/editgame"
+@using GameStore.Frontend.Models
+
+<PageTitle>New game</PageTitle>
+<h3>EditGame</h3>
+
+<button class=""> </button>
+<EditForm Model="@game" FormName="editGame">
+  <div class="mb-3">
+    <label for="name" class="form-label ">Name:</label>
+    <InputText id="name" @bind-Value="game.Name" class="form-control" />
+  </div>
+  <div class="mb-3">
+    <label for="genre" class="form-label ">Genre:</label>
+    <InputSelect id="genre" @bind-Value="game.GenreId" class="form-select" />
+  </div>
+  <div class="mb-3">
+    <label for="price" class="form-label ">Price:</label>
+    <InputNumber id="price" @bind-Value="game.Price" class="form-control" />
+  </div>
+  <div class="mb-3">
+    <label for="name" class="form-label  ">Name:</label>
+    <InputText id="name" @bind-Value="game.Name" class="form-control " />
+    <button class=""></button>
+  </div>      
+</EditForm>
+<a class="btn" href="#" role="button"> </a>
+
+@code {
+    private GameDetails game {get; set;} = new()
+    {
+        Name =  string.Empty,
+        ReleaseDate = DateOnly.FromDateTime(DateTime.Now)
+    };
+    
+}
